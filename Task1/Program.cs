@@ -15,6 +15,18 @@ namespace Task1
             int N = inputs[0];
             int A = inputs[1];
             int B = inputs[2];
+
+            Console.WriteLine(C(N+1, A)* C(N + 1, B));
+        }
+
+        static int C(int n, int m)
+        {
+            return Factorial(n + m - 1) / (Factorial(n - 1) * Factorial(m));
+        }
+
+        static int Factorial(int x)
+        {
+            return (x == 0) ? 1 : x * Factorial(x - 1);
         }
     }
 }
